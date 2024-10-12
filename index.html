@@ -1,7 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my personal GitHub page! I am Mahilet Tesfaye, a software engineer passionate about Java and web development.">
+    <title>Mahilet Tesfaye | Software Engineer</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 <body>
-<h1>Hello Mahilet</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <nav>
+            <div class="logo">Mahilet Tesfaye</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Hello, I'm Mahilet Tesfaye</h1>
+        <p>A Senior student @ Metro STate University, graduating on the coming Deecember,2024..</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I was born in Ethiopia. I would love to share one of the poems I wrote while taking Composition college classes here in USA that
+            describes what it looks like to be from Ethiopia in my point of view.
+        </p>
+        <img src="images/profile.jpg" alt="Profile photo of Mahilet Tesfaye">
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <img src="images/project1.png" alt="Project 1 Screenshot">
+            <h3>Project 1: Java Web API</h3>
+            <p>A RESTful API built using Java and Spring Boot, designed to manage user data efficiently.</p>
+            <a href="https://github.com/yourusername/project1" class="btn">View on GitHub</a>
+        </div>
+        <div class="project">
+            <img src="images/project2.png" alt="Project 2 Screenshot">
+            <h3>Project 2: Portfolio Website</h3>
+            <p>A responsive portfolio website created with HTML, CSS, and JavaScript to showcase my work.</p>
+            <a href="https://github.com/yourusername/project2" class="btn">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mahilet Tesfaye. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
