@@ -1,102 +1,85 @@
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
     background: #333;
-    padding: 20px;
-}
-
-.logo {
     color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    padding: 0;
 }
 
-.nav-links li {
-    margin: 0 15px;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.nav-links a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-#hero {
-    background: #0073e6;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-#hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-#hero .btn {
-    background: #fff;
-    color:  #8000ff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-#about, #projects, #contact {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#projects .project {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#contact-form {
+.hero {
+    background: url('images/background.jpg') center/cover;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
-#contact-form input, #contact-form textarea {
-    margin-bottom: 15px;
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about-content, .projects-grid {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.photo-frame {
+    background: #fff;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.btn {
-    background: #0073e6;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-footer {
+.button {
     background: #333;
     color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 500px;
 }

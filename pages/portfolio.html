@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mahilet Tesfaye</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About Me</a></li>
+                <li><a href="/pages/portfolio.html">Projects</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" onclick="showProjectDetails('project1')">
+                <h3>Project 1</h3>
+                <p>Brief description of Project 1</p>
+            </div>
+            <!-- Repeat for other projects -->
+        </div>
+        <div id="project1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('project1')">&times;</span>
+                <h3>Project 1</h3>
+                <p>Detailed description of Project 1...</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
