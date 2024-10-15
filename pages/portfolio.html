@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Mahilet Tesfaye</title>
+    <title>Mahilet Tesfaye - Projects</title>
     <link rel="stylesheet" href="/styles/style.css">
     <script src="/scripts/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about.html">About Me</a></li>
                 <li><a href="/pages/portfolio.html">Projects</a></li>
@@ -18,25 +18,69 @@
             </ul>
         </nav>
     </header>
-    <section class="projects">
+
+    <section class="projects-section">
         <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card" onclick="showProjectDetails('project1')">
-                <h3>Project 1</h3>
-                <p>Brief description of Project 1</p>
+        <div class="project-container">
+            <div class="project-card active">
+                <h3>Furniture Online Shopping Android App</h3>
+                <p>A mobile application that allows users to browse, search, and purchase furniture online.</p>
             </div>
-            <!-- Repeat for other projects -->
+            <div class="project-card">
+                <h3>Hospital Database Management System</h3>
+                <p>Implemented in Java, this system manages patient records, appointments, and medical histories.</p>
+            </div>
+            <div class="project-card">
+                <h3>Zuret Tour Guide Application</h3>
+                <p>A desktop application developed using C# and the .NET Framework for managing tour information and bookings.</p>
+            </div>
+            <div class="project-card">
+                <h3>Fitness Tracker App</h3>
+                <p>A Java-based application that helps users track their fitness activities and goals.</p>
+            </div>
+            <div class="project-card">
+                <h3>Two-Lane Traffic Control System</h3>
+                <p>Implemented in C, this system manages traffic flow on a two-lane bridge.</p>
+            </div>
+            <div class="project-card">
+                <h3>Public Transport Navigator Application</h3>
+                <p>A SpringBoot framework application that provides navigation and schedule information for public transport.</p>
+            </div>
         </div>
-        <div id="project1" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project1')">&times;</span>
-                <h3>Project 1</h3>
-                <p>Detailed description of Project 1...</p>
-            </div>
+        <div class="project-navigation">
+            <button class="arrow" id="prev">❮</button>
+            <button class="arrow" id="next">❯</button>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Mahilet Tesfaye. All rights reserved.</p>
     </footer>
+
+    <script>
+        const projectCards = document.querySelectorAll('.project-card');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateCards() {
+            projectCards.forEach((card, index) => {
+                card.classList.remove('active');
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                }
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % projectCards.length;
+            updateCards();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + projectCards.length) % projectCards.length;
+            updateCards();
+        });
+    </script>
 </body>
 </html>
