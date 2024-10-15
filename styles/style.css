@@ -280,53 +280,77 @@ nav ul li a:hover {
 }
 /* Strengths Animation Section */
 .strengths-animation {
-    background-color: #f8f8f8; /* Light background */
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.strengths-animation h2 {
-    font-family: 'Pacifico', cursive; /* Handwritten font */
-    color: #b5651d; /* Color for header */
-    margin-bottom: 1rem;
+    text-align: center; /* Center the text and items */
+    padding: 2rem; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .strengths {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    position: relative; /* Positioning context for items */
+    overflow: hidden; /* Hide overflow to enable smooth transitions */
+    height: 200px; /* Fixed height for the animation container */
 }
 
 .strength-item {
-    margin: 0 1rem;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 0.6s forwards; /* Fade in animation */
+    position: absolute; /* Absolutely positioned for stacking */
+    top: 0; /* Align to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the item */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
 }
 
-.strength-item img {
-    width: 50px; /* Adjust icon size */
-    height: 50px; /* Adjust icon size */
-    margin-bottom: 0.5rem;
+.strength-item.active {
+    opacity: 1; /* Visible when active */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px); /* Start from above */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* End at normal position */
-    }
+/* Strengths Title */
+.strengths-animation h2 {
+    font-size: 2rem; /* Size of the section title */
+    color: #333; /* Dark color for the title */
+    margin-bottom: 1rem; /* Space below the title */
 }
 
-.strength-item:nth-child(1) { animation-delay: 0.1s; }
-.strength-item:nth-child(2) { animation-delay: 0.2s; }
-.strength-item:nth-child(3) { animation-delay: 0.3s; }
-.strength-item:nth-child(4) { animation-delay: 0.4s; }
-.strength-item:nth-child(5) { animation-delay: 0.5s; }
+/* Leadership and Clubs Section */
+.leadership-clubs {
+    background-color: #f9f9f9; /* Light background color for contrast */
+    padding: 2rem; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 2rem 0; /* Space around the section */
+}
 
+.leadership-clubs h2 {
+    font-size: 2rem; /* Increase size of the section title */
+    text-align: center; /* Center the title */
+    color: #333; /* Dark color for the title */
+    margin-bottom: 1.5rem; /* Space below the title */
+}
+
+.club-item {
+    margin-bottom: 1.5rem; /* Space between items */
+    border-bottom: 1px solid #ccc; /* Subtle bottom border */
+    padding-bottom: 1rem; /* Padding for the bottom of each item */
+}
+
+.club-item h3 {
+    font-size: 1.5rem; /* Size of the club item titles */
+    color: #b5651d; /* Custom color for club titles */
+    margin: 0; /* Remove default margin */
+}
+
+.club-item p {
+    margin: 0.5rem 0; /* Margins for paragraphs */
+    color: #555; /* Medium text color for readability */
+}
+
+.club-item ul {
+    margin: 0; /* Remove default margin */
+    padding-left: 1.5rem; /* Indent the list */
+    list-style-type: disc; /* Use bullet points for the list */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
