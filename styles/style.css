@@ -96,6 +96,7 @@ nav ul li a:hover {
 }
 
 .hero-text .elevator-pitch {
+    font-family: Rennie 
     font-size: 1rem; /* Adjust pitch size */
     color: #777; /* Lighter color for the pitch */
     margin: 0.5rem 0; /* Margins for spacing */
@@ -222,8 +223,7 @@ nav ul li a:hover {
 }
 
 .about-section img.profile-pic {
-    width: 200px;
-    border-radius: 10px;
+    width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: -60px;
