@@ -45,7 +45,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     padding: 20px;
 }
 
@@ -71,7 +71,6 @@ nav ul li a:hover {
 .profile-pic img {
     width: 300px;
     height: auto;
-    border-radius: 15px;
     border: 4px solid #f9a826;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -185,6 +184,92 @@ nav ul li a:hover {
         height: 50px;
     }
 }
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #f4f4f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    font-size: 1.1rem;
+    color: #1c3d5a;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #1c3d5a;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-section img.profile-pic {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-section img.profile-pic:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.childhood-pic {
+    position: relative;
+    width: 300px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.hanging-pic {
+    width: 100%;
+    border: 5px solid #e3dac9; /* Frame color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
+    border-radius: 8px;
+}
+
+.hanging-pic::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 30px;
+    background: #b5651d; /* String color */
+    z-index: -1;
+}
+
+.hanging-pic::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: #b5651d; /* Rod color */
+    z-index: -2;
+}
+
+.childhood-pic .hanging-pic:hover {
+    transform: rotate(-2deg); /* Slight tilt on hover for realism */
+    transition: transform 0.3s ease-in-out;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -230,6 +315,20 @@ nav ul li a:hover {
     .contact-icon {
         width: 50px;
         height: 50px;
+    }
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .about-section img.profile-pic {
+        position: relative;
+        display: block;
+        margin: 1rem auto 0;
+        left: 0;
+        transform: none;
+    }
+    .hanging-pic {
+        transform: rotate(1deg);
     }
 }
 
