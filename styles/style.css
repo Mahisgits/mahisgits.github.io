@@ -41,55 +41,64 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('images/background.jpg') center/cover no-repeat;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('/images/hero-background.jpg') no-repeat center center/cover; /* Optional background image */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
-.hero-content {
+/* Hero Overlay */
+.hero-overlay {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 2rem; /* Add padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
     display: flex;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 2rem;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 2rem;
-    color: #ffffff;
+    align-items: center; /* Align items in the center */
+    max-width: 1200px; /* Limit the maximum width */
+    width: 90%; /* Responsive width */
 }
 
-/* Profile Picture Styling */
+/* Profile Picture */
 .profile-pic {
-    flex: 1;
+    flex: 1; /* Allow the profile picture to take one part of the space */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the profile picture */
+    margin-right: 2rem; /* Space between picture and text */
 }
 
 .profile-pic img {
-    width: 300px;
-    height: auto;
-    border: 4px solid #f9a826;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px; /* Increase size of the profile picture */
+    height: 150px; /* Make it a square */
+    border-radius: 50%; /* Circle shape */
+    border: 3px solid #b5651d; /* Bold border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect for the picture */
 }
 
-.profile-pic img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Text Section */
+/* Hero Text */
 .hero-text {
-    flex: 2;
-    text-align: left;
+    flex: 2; /* Allow text to take up more space */
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem; /* Increase font size for the name */
+    color: #333; /* Dark text color */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-text .tagline {
+    font-size: 1.2rem; /* Adjust tagline size */
+    color: #555; /* Medium text color */
+    margin: 0.5rem 0; /* Margins for spacing */
+}
+
+.hero-text .elevator-pitch {
+    font-size: 1rem; /* Adjust pitch size */
+    color: #777; /* Lighter color for the pitch */
+    margin: 0.5rem 0; /* Margins for spacing */
 }
 
 .tagline {
@@ -269,26 +278,80 @@ nav ul li a:hover {
     transform: rotate(-2deg); /* Slight tilt on hover for realism */
     transition: transform 0.3s ease-in-out;
 }
+/* Strengths Animation Section */
+.strengths-animation {
+    background-color: #f8f8f8; /* Light background */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.strengths-animation h2 {
+    font-family: 'Pacifico', cursive; /* Handwritten font */
+    color: #b5651d; /* Color for header */
+    margin-bottom: 1rem;
+}
+
+.strengths {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.strength-item {
+    margin: 0 1rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards; /* Fade in animation */
+}
+
+.strength-item img {
+    width: 50px; /* Adjust icon size */
+    height: 50px; /* Adjust icon size */
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+.strength-item:nth-child(1) { animation-delay: 0.1s; }
+.strength-item:nth-child(2) { animation-delay: 0.2s; }
+.strength-item:nth-child(3) { animation-delay: 0.3s; }
+.strength-item:nth-child(4) { animation-delay: 0.4s; }
+.strength-item:nth-child(5) { animation-delay: 0.5s; }
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-overlay {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+    }
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
 
+   
     .profile-pic {
-        margin-bottom: 1rem;
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add bottom margin */
     }
 
     .hero-text {
         text-align: center;
     }
 
-    .hero-text h1 {
-        font-size: 2.2rem;
+    .hero-text {
+        text-align: center; /* Center the text */
     }
 
     .tagline, .elevator-pitch {
