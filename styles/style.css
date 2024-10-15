@@ -42,7 +42,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height:200vh; /* Full viewport height */
     background: url('/images/hero-background.jpg') no-repeat center center/cover; /* Optional background image */
     display: flex;
     align-items: center; /* Center vertically */
@@ -71,9 +71,8 @@ nav ul li a:hover {
 }
 
 .profile-pic img {
-    width: 150px; /* Increase size of the profile picture */
-    height: 150px; /* Make it a square */
-    border-radius: 50%; /* Circle shape */
+    width: 300px; /* Increase size of the profile picture */
+    height: 300px; /* Make it a square */
     border: 3px solid #b5651d; /* Bold border */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect for the picture */
 }
@@ -96,8 +95,8 @@ nav ul li a:hover {
 }
 
 .hero-text .elevator-pitch {
-    font-family: Rennie 
-    font-size: 1rem; /* Adjust pitch size */
+    font-family: cursive 
+    font-size: 3rem; /* Adjust pitch size */
     color: #777; /* Lighter color for the pitch */
     margin: 0.5rem 0; /* Margins for spacing */
 }
