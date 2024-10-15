@@ -30,23 +30,24 @@
         }
 
         .project-container {
-            display: flex;
-            overflow: hidden;
-            gap: 2rem;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px; /* Space between cards */
         }
 
+
         .project-card {
-            position: relative;
-            background: #f5f3ec;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 350px;
-            transition: transform 0.3s ease-in-out;
-        }
+        flex: 1 1 calc(33.33% - 16px); /* 3 cards per row, minus the gap */
+        max-width: 300px;
+        margin: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        background-color: #fff;
+        border-radius: 8px;
+         }
+      
+
 
         .project-card img {
             width: 100%;
