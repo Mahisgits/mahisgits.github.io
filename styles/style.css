@@ -489,12 +489,24 @@ nav ul li a:hover {
         transform: rotate(1deg);
     }
 }
+html, body {
+    height: 100%; /* Ensure body takes full height */
+    margin: 0; /* Remove default margin */
+}
 
-/* Footer */
+body {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.projects-section {
+    flex: 1; /* Allow this section to grow */
+}
+
 footer {
-    background: #1c3d5a;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center; /* Center text */
+    padding: 1rem; /* Padding for the footer */
+    margin-top: auto; /* Push footer to the bottom */
 }
