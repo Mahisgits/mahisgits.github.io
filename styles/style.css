@@ -42,36 +42,50 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     background: url('images/background.jpg') center/cover no-repeat;
-    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    height: 90vh;
+    padding: 20px;
 }
 
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 3rem;
+.hero-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
-    text-align: center;
+    padding: 2rem;
     color: #ffffff;
-    max-width: 700px;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-pic img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
     border: 4px solid #f9a826;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-pic img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Section */
+.hero-text {
+    flex: 2;
+    text-align: left;
 }
 
 .hero-text h1 {
@@ -106,24 +120,90 @@ nav ul li a:hover {
     background: #e88b00;
     transform: translateY(-2px);
 }
-
-/* Footer */
-footer {
-    background: #1c3d5a;
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #1c3d5a, #f9a826);
     color: #ffffff;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 1rem;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2.2rem;
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 
-    .hero-overlay {
-        padding: 2rem;
+    .profile-pic {
+        margin-bottom: 1rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
     }
 
     .tagline, .elevator-pitch {
@@ -138,4 +218,26 @@ footer {
     nav ul li {
         margin: 5px 0;
     }
+    .contact-section {
+        padding: 2rem 1rem;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #1c3d5a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
