@@ -5,7 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahilet Tesfaye - Projects</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <script src="/scripts/script.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #333;
+        }
+
+        .projects-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #e0ebf0;
+        }
+
+        .projects-section h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2a3e52;
+        }
+
+        .project-container {
+            display: flex;
+            overflow: hidden;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .project-card {
+            position: relative;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 350px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card-content {
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .project-card h3 {
+            font-size: 1.75rem;
+            margin: 0;
+            color: #2a3e52;
+        }
+
+        .project-card p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .project-navigation button {
+            background-color: #2a3e52;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-navigation button:hover {
+            background-color: #4b6e94;
+        }
+
+        footer {
+            background-color: #2a3e52;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,33 +118,50 @@
             </ul>
         </nav>
     </header>
-
     <section class="projects-section">
         <h2>My Projects</h2>
         <div class="project-container">
-            <div class="project-card active">
-                <h3>Furniture Online Shopping Android App</h3>
-                <p>A mobile application that allows users to browse, search, and purchase furniture online.</p>
+            <div class="project-card">
+                <img src="/images/furniture-app.jpg" alt="Furniture Online Shopping App">
+                <div class="project-card-content">
+                    <h3>Furniture Online Shopping Android App</h3>
+                    <p>A mobile app that allows users to browse, search, and purchase furniture online, with user-friendly UI/UX and secure payment integration.</p>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Hospital Database Management System</h3>
-                <p>Implemented in Java, this system manages patient records, appointments, and medical histories.</p>
+                <img src="/images/hospital-db.jpg" alt="Hospital Database Management System">
+                <div class="project-card-content">
+                    <h3>Hospital Database Management System</h3>
+                    <p>Implemented in Java, this system manages patient records, appointments, and billing with robust data handling and security.</p>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Zuret Tour Guide Application</h3>
-                <p>A desktop application developed using C# and the .NET Framework for managing tour information and bookings.</p>
+                <img src="/images/zuret-tour-guide.jpg" alt="Zuret Tour Guide Application">
+                <div class="project-card-content">
+                    <h3>Zuret Tour Guide Application</h3>
+                    <p>A desktop app built using C# .Net Framework, offering guided tours, location details, and itineraries for tourists.</p>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Fitness Tracker App</h3>
-                <p>A Java-based application that helps users track their fitness activities and goals.</p>
+                <img src="/images/fitness-tracker.jpg" alt="Fitness Tracker App">
+                <div class="project-card-content">
+                    <h3>Fitness Tracker App</h3>
+                    <p>Developed in Java, this app tracks workouts, monitors progress, and syncs with wearable devices for comprehensive fitness tracking.</p>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Two-Lane Traffic Control System</h3>
-                <p>Implemented in C, this system manages traffic flow on a two-lane bridge.</p>
+                <img src="/images/two-lane-traffic.jpg" alt="Two-Lane Traffic Control System">
+                <div class="project-card-content">
+                    <h3>Two-Lane Traffic Control System</h3>
+                    <p>Implemented in C, this system manages traffic flow on a two-lane bridge using multithreading and synchronization techniques.</p>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Public Transport Navigator Application</h3>
-                <p>A SpringBoot framework application that provides navigation and schedule information for public transport.</p>
+                <img src="/images/public-transport-navigator.jpg" alt="Public Transport Navigator Application">
+                <div class="project-card-content">
+                    <h3>Public Transport Navigator</h3>
+                    <p>Developed using the Spring Boot framework, this application provides navigation and scheduling for public transport, featuring React front-end and Java back-end.</p>
+                </div>
             </div>
         </div>
         <div class="project-navigation">
@@ -56,31 +173,5 @@
     <footer>
         <p>&copy; 2024 Mahilet Tesfaye. All rights reserved.</p>
     </footer>
-
-    <script>
-        const projectCards = document.querySelectorAll('.project-card');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentIndex = 0;
-
-        function updateCards() {
-            projectCards.forEach((card, index) => {
-                card.classList.remove('active');
-                if (index === currentIndex) {
-                    card.classList.add('active');
-                }
-            });
-        }
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % projectCards.length;
-            updateCards();
-        });
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + projectCards.length) % projectCards.length;
-            updateCards();
-        });
-    </script>
 </body>
 </html>
