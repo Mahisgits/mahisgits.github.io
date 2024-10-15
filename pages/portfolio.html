@@ -40,7 +40,7 @@
 
         .project-card {
             position: relative;
-            background: #574001;
+            background: #f5f3ec;
             border-radius: 20px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -98,6 +98,12 @@
         .project-navigation button:hover {
             background-color: #4b6e94;
         }
+        @media (max-width: 600px) {
+         .project-card {
+        flex: 1 1 100%; /* Full width on smaller screens */
+          }
+        }
+
 
         footer {
             background-color: #2a3e52;
